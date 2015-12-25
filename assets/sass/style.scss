@@ -693,6 +693,10 @@ table {
 
     .footer-copyright { padding: 0 10px; }
 
+    .post-comments {
+        margin: 0 40px;
+    }
+
     .post-comments-header {
         margin: 20px 0;
         background-color: #F3F2F2;
@@ -700,8 +704,14 @@ table {
         padding: 5px 10px;
     }
 
-    .toggle-post-comments {
+    #toggle-post-comments {
         background: none;
-        border: none;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+        font-size: 0.75em;
+    }
+
+    #toggle-post-comments:focus {
+        outline: 0;
     }
 }
