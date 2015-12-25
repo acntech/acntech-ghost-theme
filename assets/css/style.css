@@ -613,3 +613,15 @@ table {
     padding: 0 10px; } }
 
 /*# sourceMappingURL=style.css.map */
+
+  .post-comments-header {
+    margin: 20px 0;
+    background-color: #F3F2F2;
+    color: #019F00;
+    padding: 5px 10px;
+  }
+
+  .toggle-post-comments {
+    background: none;
+    border: none;
+  }

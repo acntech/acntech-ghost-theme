@@ -692,4 +692,16 @@ table {
     }
 
     .footer-copyright { padding: 0 10px; }
+
+    .post-comments-header {
+        margin: 20px 0;
+        background-color: #F3F2F2;
+        color: $primary;
+        padding: 5px 10px;
+    }
+
+    .toggle-post-comments {
+        background: none;
+        border: none;
+    }
 }

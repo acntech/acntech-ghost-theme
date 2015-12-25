@@ -5,12 +5,26 @@ jQuery(function($) {
     /* ============================================================ */
     $('#nav-link-home').html('<i class="fa fa-home"></i>');
     $('#nav-link-sitemap').addClass('js-show-index').html('<i class="fa fa-sitemap"></i>');
-    $('#nav-link-about').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-info-circle"></i>');
+    $('#nav-link-about').html('<i class="fa fa-info-circle"></i>');
     $('#nav-link-rss').removeAttr('class').html('<i class="fa fa-rss"></i>');
     $('#nav-link-facebook').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-facebook-square"></i>');
     $('#nav-link-twitter').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-twitter"></i>');
     $('#nav-link-instagram').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-instagram"></i>');
     $('#nav-link-github').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-github"></i>');
+
+    /* ============================================================ */
+    /* Post Comments */
+    /* ============================================================ */
+    $('#disqus_thread').hide();
+
+    $('#toggle-post-comments').click(function() {
+        $('#disqus_thread').toggle(200);
+        if ($('#toggle-post-comments-icon').hasClass('fa-caret-down')) {
+            $('#toggle-post-comments-icon').removeClass('fa-caret-down').addClass('fa-caret-up');
+        } else {
+            $('#toggle-post-comments-icon').removeClass('fa-caret-up').addClass('fa-caret-down');
+        }
+    });
 
     /* ============================================================ */
     /* Responsive Videos */
