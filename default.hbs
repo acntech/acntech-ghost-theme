@@ -30,19 +30,29 @@
 
 <div id="wrapper">
     <header class="site-header">
-        <div class="container">
-            <div class="site-nav-wrapper">
-                <ul class="site-nav">
-                    {{navigation}}
-                </ul>
+        <div class="site-menu">
+            <div class="container">
+                <div class="site-nav-wrapper">
+                    <ul class="site-nav">
+                        {{navigation}}
+                    </ul>
+                </div>
             </div>
-            <div class="site-title-wrapper">
-                {{#if @blog.logo}}
-                    <p><a class="site-logo js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a></p>
-                {{else}}
-                    <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-                {{/if}}
-                <p class="site-description">{{@blog.description}}</p>
+        </div>
+        <div class="site-title">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    {{#if @blog.logo}}
+                        <div>
+                            <a class="site-logo js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>
+                        </div>
+                    {{else}}
+                        <div>
+                            <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                        </div>
+                    {{/if}}
+                    <div class="site-description">{{@blog.description}}</div>
+                </div>
             </div>
         </div>
     </header>

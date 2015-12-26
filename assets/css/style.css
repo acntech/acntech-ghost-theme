@@ -189,12 +189,10 @@ table {
   margin: 0 auto; }
 
 .site-title {
-  float: left;
   font-size: 14px;
   font-weight: 600;
   margin: 0; }
   .site-title a {
-    float: left;
     color: #019F00;
     padding: 5px 10px 6px; }
     .site-title a:hover {
@@ -203,7 +201,7 @@ table {
 .site-logo {
   display: block; }
   .site-logo img {
-    margin: 0; }
+    margin: 0 auto; }
 
 .site-description {
   color: #AEADAD;
@@ -214,8 +212,10 @@ table {
 
 .site-nav {
   list-style: none;
-  margin: 5px 0 30px;
   padding-left: 0px; }
+  ul.site-nav {
+    margin: 0;
+  }
 
 .site-nav-item {
   display: inline-block;
@@ -625,13 +625,31 @@ table {
     padding: 5px 10px;
   }
 
+  .post-comments-header div {
+    display: inline-block;
+  }
+
+  .post-comments-header-text {
+    font-size: 0.75em;
+  }
+
   #toggle-post-comments {
     background: none;
     margin: 0 5px;
     border: 1px solid #ccc;
-    font-size: 0.75em;
   }
 
   #toggle-post-comments:focus {
     outline: 0;
   }
+
+  .site-menu {
+    margin: 0 0 40px 0;
+    background-color: #303030;
+    color: #cdcdcd; }
+    .site-menu a {
+      color: #cdcdcd;
+    }
+    .site-menu a:hover {
+      color: #019F00;
+    }

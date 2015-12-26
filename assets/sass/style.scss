@@ -214,13 +214,11 @@ table {
 }
 
 .site-title {
-    float: left;
     font-size: 14px;
     font-weight: 600;
     margin: 0;
 
     a {
-        float: left;
         color: $primary;
         padding: 5px 10px 6px;
 
@@ -230,7 +228,7 @@ table {
 .site-logo {
     display: block;
 
-    img { margin: 0; }
+    img { margin: 0 auto; }
 }
 .site-description {
     color: #AEADAD;
@@ -240,9 +238,10 @@ table {
 }
 .site-nav {
     list-style: none;
-    margin: 5px 0 30px;
     padding-left: 0;
 }
+
+ul.site-nav { margin: 0; }
 
 .site-nav-item {
     display: inline-block;
@@ -704,14 +703,29 @@ table {
         padding: 5px 10px;
     }
 
+    .post-comments-header div {
+        display: inline-block;
+    }
+
+    .post-comments-header-text {
+        font-size: 0.75em;
+    }
+
     #toggle-post-comments {
         background: none;
         margin: 0 5px;
         border: 1px solid #ccc;
-        font-size: 0.75em;
     }
 
     #toggle-post-comments:focus {
         outline: 0;
+    }
+
+    .site-menu {
+        margin: 0 0 40px 0;
+        background-color: $secondary;
+        color: #cdcdcd;
+        a { color: #cdcdcd; }
+        a:hover { color: $primary; }
     }
 }
