@@ -10,6 +10,8 @@ jQuery(function($) {
     $('#nav-link-facebook').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-facebook-square"></i>');
     $('#nav-link-twitter').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-twitter"></i>');
     $('#nav-link-instagram').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-instagram"></i>');
+    $('#nav-link-linkedin').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-linkedin-square"></i>');
+    $('#nav-link-google').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-google-plus"></i>');
     $('#nav-link-github').removeAttr('class').attr('target', '_blank').html('<i class="fa fa-github"></i>');
 
     /* ============================================================ */
