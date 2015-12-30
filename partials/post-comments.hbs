@@ -1,0 +1,17 @@
+<div class="post-comments">
+    <div class="post-comments-header">
+        <span class="post-legend-icon"><i class="fa fa-comments"></i></span>
+        <span class="post-comments-platform">
+            <button id="post-comments-disqus-button" value="disqus">Disqus</button>
+            <button id="post-comments-facebook-button" value="facebook">Facebook</button>
+        </span>
+    </div>
+    <div class="post-comments-content">
+        <div id="post-comments-disqus" style="display: none;">
+            {{> disqus}}
+        </div>
+        <div id="post-comments-facebook" style="display: none;">
+            {{> facebook}}
+        </div>
+    </div>
+</div>

@@ -629,18 +629,14 @@ table {
     display: inline-block;
   }
 
-  .post-comments-header-text {
-    font-size: 0.75em;
-  }
-
-  #toggle-post-comments {
+  .post-comments-platform {
     background: none;
     margin: 0 5px;
-    border: 1px solid #ccc;
+    font-size: 0.8em;
   }
 
-  #toggle-post-comments:focus {
-    outline: 0;
+  .post-comments-platform button {
+    vertical-align: text-bottom;
   }
 
   .site-menu {
@@ -653,3 +649,9 @@ table {
     .site-menu a:hover {
       color: #019F00;
     }
+
+  .post-legend-icon {
+    font-size: 1.25em;
+    margin-right: 10px;
+    color: #AEADAD;
+  }

@@ -1,17 +1,4 @@
-<div class="post-comments">
-    <div class="post-comments-header">
-        <div>
-            <i class="fa fa-comments"></i>
-            <span class="disqus-comment-count post-comments-header-text" data-disqus-identifier="{{meta_title}}"></span>
-        </div>
-        <div style="float: right">
-            <button id="toggle-post-comments" class="post-comments-header-text">
-                <i id="toggle-post-comments-icon" class="fa fa-caret-down"></i> Show comments
-            </button>
-        </div>
-    </div>
-    <div id="disqus_thread" style="display: none;"></div>
-</div>
+<div id="disqus_thread">hey</div>
 <script>
     var disqus_config = function () {
         this.page.url = '{{@blog.url}}{{url}}';
@@ -27,4 +14,3 @@
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

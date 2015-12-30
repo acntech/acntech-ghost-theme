@@ -1,8 +1,9 @@
-jQuery(function($) {
+jQuery(function ($) {
 
     /* ============================================================ */
     /* Adaptive Site Nav Links */
     /* ============================================================ */
+
     $('#nav-link-home').html('<i class="fa fa-home"></i>');
     $('#nav-link-sitemap').addClass('js-show-index').html('<i class="fa fa-sitemap"></i>');
     $('#nav-link-about').html('<i class="fa fa-info-circle"></i>');
@@ -17,15 +18,14 @@ jQuery(function($) {
     /* ============================================================ */
     /* Post Comments */
     /* ============================================================ */
-    $('#disqus_thread').hide();
 
-    $('#toggle-post-comments').click(function() {
-        $('#disqus_thread').toggle(200);
-        if ($('#toggle-post-comments-icon').hasClass('fa-caret-down')) {
-            $('#toggle-post-comments-icon').removeClass('fa-caret-down').addClass('fa-caret-up');
-        } else {
-            $('#toggle-post-comments-icon').removeClass('fa-caret-up').addClass('fa-caret-down');
-        }
+    $('#post-comments-disqus-button').on('click', function () {
+        $('#post-comments-facebook').hide(200);
+        $('#post-comments-disqus').toggle(200);
+    });
+    $('#post-comments-facebook-button').on('click', function () {
+        $('#post-comments-disqus').hide(200);
+        $('#post-comments-facebook').toggle(200);
     });
 
     /* ============================================================ */
@@ -38,7 +38,7 @@ jQuery(function($) {
     /* Scroll To Top */
     /* ============================================================ */
 
-    $('.js-jump-top').on('click', function(e) {
+    $('.js-jump-top').on('click', function (e) {
         e.preventDefault();
 
         $('html, body').animate({'scrollTop': 0});
@@ -67,16 +67,16 @@ jQuery(function($) {
     }
 
     // Check if history is enabled for the browser
-    if ( ! History.enabled) {
+    if (!History.enabled) {
         return false;
     }
 
-    History.Adapter.bind(window, 'statechange', function() {
+    History.Adapter.bind(window, 'statechange', function () {
         var State = History.getState();
 
         // Get the requested url and replace the current content
         // with the loaded content
-        $.get(State.url, function(result) {
+        $.get(State.url, function (result) {
             var $html = $(result);
             var $newContent = $('#ajax-container', $html).contents();
 
@@ -85,7 +85,7 @@ jQuery(function($) {
 
             $('html, body').animate({'scrollTop': 0});
 
-            $ajaxContainer.fadeOut(500, function() {
+            $ajaxContainer.fadeOut(500, function () {
                 $latestPost = $newContent.filter('#latest-post');
                 $postIndex = $newContent.filter('#post-index');
 
@@ -107,14 +107,14 @@ jQuery(function($) {
                 loading = false;
                 showIndex = false;
             });
-        }).fail(function() {
+        }).fail(function () {
             // Request fail
             NProgress.done();
             location.reload();
         });
     });
 
-    $('body').on('click', '.js-ajax-link, .pagination a, .post-tags a, .post-header a', function(e) {
+    $('body').on('click', '.js-ajax-link, .pagination a, .post-tags a, .post-header a', function (e) {
         e.preventDefault();
 
         if (loading === false) {
@@ -124,13 +124,12 @@ jQuery(function($) {
 
             //if url starts with http:// and currentState.url starts with
             // https://, replace the protocol in url
-            if (url.indexOf("http://", 0) === 0)
-            {
+            if (url.indexOf("http://", 0) === 0) {
                 var urlNoProt = url.replace(/.*?:\/\//g, "");
                 var curProt = currentState.url.split("/")[0];
                 url = curProt + "//" + urlNoProt;
             }
-            
+
             // If the requested url is not the current states url push
             // the new state and make the ajax call.
             if (url !== currentState.url.replace(/\/$/, "")) {
@@ -152,7 +151,7 @@ jQuery(function($) {
 
                     NProgress.start();
 
-                    $latestPost.fadeOut(300, function() {
+                    $latestPost.fadeOut(300, function () {
                         $postIndex.fadeIn(300);
                         NProgress.done();
                     });
@@ -161,7 +160,7 @@ jQuery(function($) {
 
                     NProgress.start();
 
-                    $postIndex.fadeOut(300, function() {
+                    $postIndex.fadeOut(300, function () {
                         $latestPost.fadeIn(300);
                         NProgress.done();
                     });
