@@ -29,8 +29,8 @@
 <body class="{{body_class}}">
 
 <div id="wrapper">
-    <header class="site-header">
-        <div class="site-menu">
+    <header class="site-header"{{#if @blog.cover}} style="background-image: url('{{@blog.cover}}')"{{/if}}>
+        <div class="site-menu" style="background-color: {{#if @blog.cover}}rgba(48, 48, 48, 0.5){{else}}rgb(48, 48, 48){{/if}}">
             <div class="container">
                 <div class="site-nav-wrapper">
                     <ul class="site-nav">
@@ -64,12 +64,14 @@
 
 <footer class="footer">
     <div class="container">
-        <div class="site-title-wrapper">
-            <h1 class="site-title"><a class="js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-            <a class="button-square button-jump-top js-jump-top" href="#"><i class="fa fa-angle-up"></i></a>
+        <div>
+            <a class="button-jump-top js-jump-top" href="#"><i class="fa fa-arrow-up"></i> To the top</a>
         </div>
         <div class="site-copyright-wrapper">
-            <p class="footer-copyright">Copyright &copy; 2015-{{date format="YYYY"}} | Published with <a href="https://ghost.org" target="_blank">Ghost</a></p>
+            <p class="footer-copyright">
+                Copyright &copy; 2015-{{date format="YYYY"}} <a class="site-title js-ajax-link" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a>
+                | Published with <a href="https://ghost.org" target="_blank">Ghost</a>
+            </p>
         </div>
     </div>
 </footer>
@@ -87,7 +89,6 @@
 <script type="text/javascript" src="{{asset "js/nprogress.js"}}"></script>
 <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
-<script type="text/javascript" id="dsq-count-scr" src="https://acntech.disqus.com/count.js"></script>
 
 </body>
 </html>
