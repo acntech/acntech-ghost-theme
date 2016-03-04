@@ -399,15 +399,13 @@ ul.site-nav {
 
 .post-navigation {
     margin: 30px 0;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
     padding: 10px 0;
 }
 
 .newer-posts,
 .older-posts {
     margin: 0 5px;
-    padding: 5px 10px 6px;
 }
 
 .newer-posts:hover,
@@ -419,7 +417,13 @@ ul.site-nav {
 }
 
 .page-number {
-    color: #e5e5e5;
+    color: #AEADAD;
+}
+
+.read-more {
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 2em;
 }
 
 /* ============================================================ */
@@ -598,7 +602,7 @@ ul.site-nav {
 }
 
 .footer-copyright a:hover {
-    color: #FEFEFE;
+    color: #019F00;
 }
 
 /* ============================================================ */

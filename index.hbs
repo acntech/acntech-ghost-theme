@@ -1,13 +1,11 @@
 {{!< default}}
 
-<div class="container">
+<div class="container clearfix">
     <div class="post-navigation">
         {{pagination}}
     </div>
-    {{#foreach posts}}
 {{! No indention to prevent handlebars indenting <pre> tag content}}
-{{> post-content}}
-    {{/foreach}}
+{{> loop}}
     <div class="post-navigation">
         {{pagination}}
     </div>
