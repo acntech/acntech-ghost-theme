@@ -1,0 +1,12 @@
+<div class="sidebar-section-title">
+    <h3>Latest posts</h3>
+</div>
+<div class="sidebar-section-content">
+    <ul>
+        {{#foreach posts}}
+            <li><span class="latest-post-info latest-post-title"><a class="js-ajax-link" title="{{title}} | {{@blog.title}}" href="{{url}}">{{title}}</a></span><br/>
+                <span class="latest-post-info latest-post-meta"><time datetime="{{published_at}}">{{date format="YYYY-MM-DD"}}</time> {{author}}</span>
+            </li>
+        {{/foreach}}
+    </ul>
+</div>

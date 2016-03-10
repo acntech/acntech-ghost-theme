@@ -57,9 +57,16 @@
         </div>
     </header>
 
-    <div id="ajax-container">
-        {{{body}}}
-    </div>
+    <section class="content">
+        <article class="main">
+            <div id="ajax-container">
+                {{{body}}}
+            </div>
+        </article>
+        <aside class="sidebar">
+            {{> sidebar}}
+        </aside>
+    </section>
 </div>
 
 <footer class="footer">
@@ -88,6 +95,7 @@
 <script type="text/javascript" src="{{asset "js/jquery.history.js"}}"></script>
 <script type="text/javascript" src="{{asset "js/nprogress.js"}}"></script>
 <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/handlebars.js"}}"></script>
 <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
 
 </body>

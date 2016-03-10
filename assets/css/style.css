@@ -201,6 +201,60 @@ table tr {
     height: 265px;
 }
 
+section.content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80%;
+}
+
+article.main {
+    display: inline-block;
+    width: 70%;
+    margin: 0 -4px 0 0;
+    vertical-align: top;
+}
+
+article.main div:first-child {
+    padding-right: 20px;
+}
+
+article.main .container {
+    max-width: none;
+    margin: 0;
+}
+
+aside.sidebar {
+    display: inline-block;
+    width: 29%;
+    vertical-align: top;
+}
+
+.sidebar-wrapper {
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+}
+
+.sidebar-section {
+    margin-bottom: 40px;
+}
+
+.sidebar-header {
+    margin-top: 50px;
+}
+
+.sidebar-section-content {
+    font-size: 0.9em;
+}
+
+.latest-post-meta {
+    color: #ccc;
+    font-size: 0.7em;
+}
+
+.secondary-featured-tags {
+    font-size: 0.7em;
+}
+
 .button {
     background: #303030;
     border: none;
