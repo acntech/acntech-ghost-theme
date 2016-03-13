@@ -209,7 +209,7 @@ section.content {
 
 article.main {
     display: inline-block;
-    width: 70%;
+    width: 60%;
     margin: 0 -4px 0 0;
     vertical-align: top;
 }
@@ -225,11 +225,11 @@ article.main .container {
 
 aside.sidebar {
     display: inline-block;
-    width: 29%;
+    width: 19%;
     vertical-align: top;
 }
 
-.sidebar-wrapper {
+.sidebar-content {
     padding-left: 20px;
     border-left: 1px solid #eee;
 }
@@ -327,7 +327,7 @@ aside.sidebar {
 
 .site-nav {
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 ul.site-nav {

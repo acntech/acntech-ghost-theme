@@ -1,0 +1,44 @@
+<div class="sidebar-section-title">
+    <h3>Featured tags</h3>
+</div>
+<div id="featured-tags-content" class="sidebar-section-content"></div>
+<script>
+    if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></' + 'script>');
+    }
+</script>
+<script>
+    jQuery(function ($) {
+
+        var tags = [];
+        tags.push({name: 'Java', children: ['Java EE', 'Spring']});
+        tags.push({name: 'Web', children: ['JavaScript']});
+        tags.push({name: 'Middleware', children: ['Oracle Middleware', 'IBM Middleware']});
+        tags.push({name: 'Database', children: ['SQL', 'NoSQL']});
+        tags.push({name: 'Methodology', children: ['Agile', 'Scrum', 'Test']});
+
+        var writeTagHtml = function (name) {
+            var tagName = name.replace(/\s+/g, '-').toLowerCase();
+            return '<li id="featured-tag-' + tagName + '"><a href="/tag/' + tagName + '" title="' + name + '">' + name + '</a></li>\n';
+        };
+
+        var html = '<ul class="primary-featured-tags">\n';
+        $.each(tags, function (i, tag) {
+            var name = tag.name;
+            var children = tag.children;
+
+            html += writeTagHtml(name);
+
+            if (children.length > 0) {
+                html = '<ul class="secondary-featured-tags">\n';
+                $.each(children, function (j, child) {
+                    html += writeTagHtml(child);
+                });
+                html += '</ul>\n';
+            }
+        });
+        html += '</ul>\n';
+
+        $('#featured-tags-content').html(html);
+    });
+</script>
