@@ -682,6 +682,14 @@ ul.site-nav {
     .post-stub-tag {
         display: none;
     }
+
+    article.main {
+        width: 100%;
+    }
+
+    aside.sidebar {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
